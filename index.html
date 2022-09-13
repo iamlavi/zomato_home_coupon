@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse" style="border-radius: unset; margin-bottom: unset;">
+        <div class="container-fluid">
+            <div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Zomato</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="search">
+        <div id="logo">
+            <span>Z!</span>
+        </div>
+        <div id="heading">
+            <span> Best Place Near You</span>
+        </div>
+        <div id="dropdown1">
+            <select>
+                <option>----SELECT CITY----</option>
+                <option>Delhi</option>
+                <option>Mumbai</option>
+            </select>
+        </div>
+        <div id="dropdown2">
+            <select id="restSelect">
+                <option>----SELECT Restaurants----</option>
+                <option>Wow Moms</option>
+                <option>ChopStick</option>
+            </select>
+        </div>
+    </div>
+    <div id="coupon">
+        <div class="coupon-card">
+            <button onClick="closeCoupon()">&times;</button>
+            <h3>20% flat off on all orders.</h3>
+
+            <div class="coupon-row">
+                <span id="cpnCode">STEALDEAL20</span>
+                <span id="cpnBtn">COPY CODE</span>
+            </div>
+
+            <p>Valid Till 20 dec, 2022.</p>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1>Quick Search</h1>
+            <p>Find Restaurants By MealType</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="/listing/listing.html">
+                        <img src="/images/food-tile.jpg" alt="breakfast" style="width:100%" />
+                        <div class="caption">
+                            <h3>Breakfast</h3>
+                            <p>Start your day with exclusive breatfast options</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="/listing/listing.html">
+                        <img src="/images/dinner1.png" alt="breakfast" style="width:100%" />
+                        <div class="caption">
+                            <h3>Dinner</h3>
+                            <p>wide variety for dinner.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="/listing/listing.html">
+                        <img src="/images/nightlife.png" alt="breakfast" style="width:100%" />
+                        <div class="caption">
+                            <h3>NightLife</h3>
+                            <p>a palace where you can enjoy</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="/listing/listing.html">
+                        <img src="/images/snacks.jpg" alt="breakfast" style="width:100%" />
+                        <div class="caption">
+                            <h3>Snacks</h3>
+                            <p>Get some snacks here</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="/listing/listing.html">
+                        <img src="/images/drinks.jpg" alt="breakfast" style="width:100%" />
+                        <div class="caption">
+                            <h3>Drinks</h3>
+                            <p>What you want in drinks.. get here</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="/listing/listing.html">
+                        <img src="/images/lunch.png" alt="breakfast" style="width:100%" />
+                        <div class="caption">
+                            <h3>Lunch</h3>
+                            <p>Lunch karlo guyzz..</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    
+
+    <footer>
+        <hr>
+        <h3>&copy; Developer Funnel</h3>
+        <div class="fotDiv">
+            <ul>
+                <li>Contact Us</li>
+                <li>About Us</li>
+            </ul>
+        </div>
+        <div class="fotDiv">
+            <ul>
+                <li>Contact Us</li>
+                <li>About Us</li>
+            </ul>
+        </div>
+        <div class="fotDiv noBorder">
+            <ul>
+                <li>Contact Us</li>
+                <li>About Us</li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+
+        function loadCoupon() {
+            document.getElementById('coupon').style.display = "block";
+            document.getElementById('search').style.opacity = "0.5";
+        }
+
+        const closeCoupon = () => {
+            document.getElementById('coupon').style.display = "none";
+            document.getElementById('search').style.opacity = "1";
+        }
+
+        document.querySelector(".close").addEventListener("click", function () {
+            document.querySelector(".popup").style.display = "none";
+        })
+
+        let cpnBtn = document.getElementById("cpnBtn");
+        let cpnCode = document.getElementById("cpnCode");
+
+        cpnBtn.onclick = function () {
+            navigator.clipboard.writeText(cpnCode.innerHTML);
+            cpnBtn.innerHTML = "COPIED";
+            setTimeout(function () {
+                cpnBtn.innerHTML = "COPY CODE"
+            }, 3000)
+        }
+    </script>
+</body>
+
+</html>
